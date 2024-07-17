@@ -1,5 +1,7 @@
 # Inserts
 
+The following SQL statements contain sample data to fill up the tables previously created.
+
 ## Insert: Eventos
 
 The following SQL statement inserts initial event data into the `Eventos` table. 
