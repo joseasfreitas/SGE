@@ -42,7 +42,7 @@ INSERT INTO Funcionarios (ID, Nome, Posição, Salário) VALUES
 
 ## Insert: Inscricoes
 
-The following SQL statement inserts initial registration data into the Inscricoes table. 
+The following SQL statement inserts initial registration data into the `Inscricoes` table. 
 Each registration links a participant (ParticipanteID) to an event (EventoID) along with the registration date (DataInscrição).
 
 ```sql
@@ -61,7 +61,7 @@ INSERT INTO Inscricoes (EventoID, ParticipanteID, DataInscrição) VALUES
 
 ## Insert: Palestrantes
 
-The following SQL statement inserts initial speaker data into the Palestrantes table. 
+The following SQL statement inserts initial speaker data into the `Palestrantes` table. 
 Each speaker is defined with attributes such as ID, name, and specialization (Especialidade).
 
 ```sql
@@ -80,7 +80,7 @@ INSERT INTO Palestrantes (ID, Nome, Especialidade) VALUES
 
 ## Insert: Palestras
 
-The following SQL statement inserts initial talk data into the Palestras table.
+The following SQL statement inserts initial talk data into the `Palestras` table.
 Each lecture is linked to an event (EventoID) and a speaker (PalestranteID), with attributes such as ID, title (Título), and schedule (Horário).
 
 ```sql
@@ -99,7 +99,7 @@ INSERT INTO Palestras (ID, EventoID, PalestranteID, Título, Horário) VALUES
 
 ## Insert: PalestrasFuncionarios
 
-The following SQL statement inserts initial employee data into the PalestrasFuncionarios table.
+The following SQL statement inserts initial employee data into the `PalestrasFuncionarios` table.
 Each record links an employee (Funcionarios_ID) to a lecture (Palestras_ID).
 
 ```sql
@@ -118,7 +118,7 @@ INSERT INTO PalestrasFuncionarios (Palestras_ID, Funcionarios_ID) VALUES
 
 ## Insert: Participantes
 
-The following SQL statement inserts initial participant data into the Participantes table.
+The following SQL statement inserts initial participant data into the `Participantes` table.
 Each participant is defined with attributes such as ID, name, email, and phone number (Telefone).
 
 ```sql
