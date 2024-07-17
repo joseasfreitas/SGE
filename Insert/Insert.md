@@ -17,6 +17,7 @@ INSERT INTO Eventos (ID, Nome, Data, Local, Capacidade, CapacidadeRestante) VALU
 (8, 'Workshop de Medicina Moderna', '2024-09-12', 'Auditório Principal', 150, 150),
 (9, 'Congresso de Educação', '2024-11-20', 'Sala 3', 120, 120),
 (10, 'Encontro Nacional de Tecnologia', '2024-12-05', 'Auditório C', 250, 250);
+```
 
 ## Insert: Funcionarios
 
@@ -35,12 +36,14 @@ INSERT INTO Funcionarios (ID, Nome, Posição, Salário) VALUES
 (8, 'Thiago Vieira', 'Analista de Sistemas', 4200.00),
 (9, 'Jéssica Silva', 'Pesquisador', 4800.00),
 (10, 'Bruno Martins', 'Consultor Educacional', 5200.00);
+```
 
 ## Insert: Inscricoes
 
 The following SQL statement inserts initial registration data into the Inscricoes table. 
 Each registration links a participant (ParticipanteID) to an event (EventoID) along with the registration date (DataInscrição).
 
+```sql
 INSERT INTO Inscricoes (EventoID, ParticipanteID, DataInscrição) VALUES
 (1, 1, '2024-08-10'),
 (1, 2, '2024-08-12'),
@@ -52,12 +55,14 @@ INSERT INTO Inscricoes (EventoID, ParticipanteID, DataInscrição) VALUES
 (7, 8, '2024-09-05'),
 (8, 9, '2024-09-10'),
 (9, 10, '2024-10-18');
+```
 
 ## Insert: Palestrantes
 
 The following SQL statement inserts initial speaker data into the Palestrantes table. 
 Each speaker is defined with attributes such as ID, name, and specialization (Especialidade).
 
+```sql
 INSERT INTO Palestrantes (ID, Nome, Especialidade) VALUES
 (1, 'Luciana Oliveira', 'Inteligência Artificial'),
 (2, 'Fernando Souza', 'Marketing Digital'),
@@ -69,12 +74,14 @@ INSERT INTO Palestrantes (ID, Nome, Especialidade) VALUES
 (8, 'Pedro Santos', 'Educação'),
 (9, 'Ana Paula Silva', 'Tecnologia da Informação'),
 (10, 'Marcos Oliveira', 'Inovação');
+```
 
 ## Insert: Palestras
 
 The following SQL statement inserts initial talk data into the Palestras table.
 Each lecture is linked to an event (EventoID) and a speaker (PalestranteID), with attributes such as ID, title (Título), and schedule (Horário).
 
+```sql
 INSERT INTO Palestras (ID, EventoID, PalestranteID, Título, Horário) VALUES
 (1, 1, 1, 'Avanços em IA', '2024-08-15 10:00:00'),
 (2, 2, 2, 'Estratégias de Marketing Digital', '2024-09-20 14:30:00'),
@@ -86,13 +93,14 @@ INSERT INTO Palestras (ID, EventoID, PalestranteID, Título, Horário) VALUES
 (8, 8, 8, 'Técnicas Avançadas de Fotografia', '2024-09-12 11:30:00'),
 (9, 9, 9, 'Novas Fronteiras na Educação', '2024-11-20 10:15:00'),
 (10, 10, 10, 'Tecnologia e Educação', '2024-12-05 14:00:00');
+```
 
 ## Insert: PalestrasFuncionarios
 
 The following SQL statement inserts initial employee data into the PalestrasFuncionarios table.
 Each record links an employee (Funcionarios_ID) to a lecture (Palestras_ID).
 
-
+```sql
 INSERT INTO PalestrasFuncionarios (Palestras_ID, Funcionarios_ID) VALUES
 (1, 1),
 (2, 2),
@@ -104,12 +112,14 @@ INSERT INTO PalestrasFuncionarios (Palestras_ID, Funcionarios_ID) VALUES
 (8, 8),
 (9, 9),
 (10, 10);
+```
 
 ## Insert: Participantes
 
 The following SQL statement inserts initial participant data into the Participantes table.
 Each participant is defined with attributes such as ID, name, email, and phone number (Telefone).
 
+```sql
 INSERT INTO Participantes (ID, Nome, Email, Telefone) VALUES
 (1, 'Carlos Silva', 'carlos.silva@example.com', '(11) 9999-8888'),
 (2, 'Patrícia Oliveira', 'patricia.oliveira@example.com', '(22) 9876-5432'),
@@ -121,4 +131,4 @@ INSERT INTO Participantes (ID, Nome, Email, Telefone) VALUES
 (8, 'Rafael Vieira', 'rafael.vieira@example.com', '(88) 7777-8888'),
 (9, 'Juliano Almeida', 'juliano.almeida@example.com', '(99) 9999-0000'),
 (10, 'Renata Rodrigues', 'renata.rodrigues@example.com', '(00) 1234-5678');
-
+```
