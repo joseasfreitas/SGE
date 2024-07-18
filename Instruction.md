@@ -17,7 +17,8 @@ The details of the .sql scripts are located inside the script files or in the re
 
 ## Running Scripts
 
-- **Insert, Select (Listar), Triggers, Procedures, and Functions:**
+- **Insert, Query, Triggers, Procedures, and Functions:**
   - To execute these scripts, navigate to your database and paste the code from the respective folders into your SQL editor.
+  - Use the scripts inside the `Insert` folder for insert sample data to the tables previously created. 
 
 By following these steps, you will set up and use the database efficiently. For more detailed instructions, refer to the script files or the accompanying .md files.
