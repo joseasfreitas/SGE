@@ -8,23 +8,24 @@ CREATE TRIGGER atualizar_capacidade_restante_insert
 AFTER INSERT ON Inscricoes
 FOR EACH ROW
 BEGIN
-    DECLARE capacidade_atual INT;
-    DECLARE inscritos_count INT;
+    DECLARE capacidade_atual INT;     -- Declare variable to hold current event capacity
+    DECLARE inscritos_count INT;      -- Declare variable to count registrations for the event
     
-    -- Get the current capacity of the event
+    -- Retrieve the current capacity of the event based on the new registration
     SELECT Capacidade INTO capacidade_atual
     FROM Eventos
     WHERE ID = NEW.EventoID;
 
-    -- Get the count of inscriptions for the event
+    -- Count the number of registrations for the event after the new insertion
     SELECT COUNT(*) INTO inscritos_count
     FROM Inscricoes
     WHERE EventoID = NEW.EventoID;
 
-    -- Update the CapacidadeRestante for the event
+    -- Update the remaining capacity for the event after the new registration
     UPDATE Eventos
     SET CapacidadeRestante = capacidade_atual - inscritos_count
     WHERE ID = NEW.EventoID;
 END //
 
 DELIMITER ;
+

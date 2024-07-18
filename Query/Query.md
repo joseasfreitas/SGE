@@ -6,7 +6,6 @@ The following SQL statement selects the event capacity remaining for a specific 
 Replace `'?'` with the desired `EventoID`.
 
 ```sql
-
 SELECT 
     e.ID AS EventoID,
     e.Nome AS NomeEvento,
