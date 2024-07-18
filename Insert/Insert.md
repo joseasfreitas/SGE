@@ -1,6 +1,8 @@
 # Inserts
 
 The following SQL statements contain sample data to fill up the tables previously created.
+If you want to run all of the inserts sql statments at once, just run the InsertAll.sql file.
+The InsertAll.sql script inserts all of the sample data into its respective tables.
 
 ## Insert: Eventos
 
