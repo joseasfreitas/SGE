@@ -3,7 +3,7 @@ SELECT
     a.Nome AS NomeEvento,
     b.ID AS PalestranteID,
     b.Nome AS NomePalestrante,
-    c.Titulo AS TituloPalestra,
+    c.Título AS TituloPalestra,
     c.Horário AS HorarioPalestra
 FROM 
     Palestras c
