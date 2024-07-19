@@ -24,7 +24,7 @@ WHERE
 The following SQL statement selects all events from the Eventos table.
 
 ```sql
-SELECT 'ID','Nome', 'Local', 'Data' FROM Eventos;
+Select * from Eventos
 ```
 
 ## Query: EventosporLocal
