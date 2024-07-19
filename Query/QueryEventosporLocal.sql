@@ -1,4 +1,4 @@
 -- Change '?' with the name of the location
-SELECT ID, Nome, Data, Local, CapacidadeTotal, CapacidadeRestante
+SELECT ID, Nome, Data, Local, Capacidade, CapacidadeRestante
 FROM Eventos
 WHERE Local = '?'; 
