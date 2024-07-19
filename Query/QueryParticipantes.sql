@@ -3,7 +3,7 @@ SELECT
     b.ID AS ParticipanteID,
     b.Nome AS NomeParticipante
 FROM 
-    Inscrições c
+    Inscricoes c
 JOIN 
     Eventos a ON c.EventoID = a.ID
 JOIN 
