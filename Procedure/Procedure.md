@@ -114,7 +114,16 @@ BEGIN
         WHERE Data BETWEEN data_inicio AND data_fim;
     DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = TRUE;  -- Handler for cursor end
 
-    OPEN evento_cursor;  -- Open the cursor to start fetching
+    -- Create a temporary table to store the results
+    CREATE TEMPORARY TABLE IF NOT EXISTS temp_eventos_report (
+        EventoID INT,
+        NomeEvento VARCHAR(45),
+        DataEvento DATE,
+        Participantes INT
+    );
+
+    -- Open the cursor to start fetching
+    OPEN evento_cursor;  
     read_loop: LOOP
         FETCH evento_cursor INTO evento_id, evento_nome, evento_data;  -- Fetch event details into variables
         IF done THEN
@@ -126,11 +135,19 @@ BEGIN
         FROM Inscricoes
         WHERE EventoID = evento_id;
         
-        -- Output event details along with participant count
-        SELECT evento_id AS EventoID, evento_nome AS NomeEvento, evento_data AS DataEvento, participantes_count AS Participantes;
+        -- Insert event details along with participant count into the temporary table
+        INSERT INTO temp_eventos_report (EventoID, NomeEvento, DataEvento, Participantes)
+        VALUES (evento_id, evento_nome, evento_data, participantes_count);
     END LOOP;
     
-    CLOSE evento_cursor;  -- Close the cursor after fetching is complete
+    -- Close the cursor after fetching is complete
+    CLOSE evento_cursor;  
+
+    -- Select the accumulated results from the temporary table
+    SELECT * FROM temp_eventos_report;
+
+    -- Drop the temporary table
+    DROP TEMPORARY TABLE temp_eventos_report;
 END //
 
 DELIMITER ;
